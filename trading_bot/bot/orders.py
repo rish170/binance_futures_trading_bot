@@ -22,17 +22,11 @@ def execute_order(client: BinanceFuturesClient, symbol: str, side: str, order_ty
 def execute_twap_order(client: BinanceFuturesClient, symbol: str, side: str, total_quantity: float, slices: int, interval_seconds: int):
     logger.info(f"Starting TWAP | symbol={symbol} side={side} total_quantity={total_quantity} slices={slices} interval={interval_seconds}s")
     
-    # Calculate precision by checking how many decimal places total_quantity has, or standardizing.
-    # We'll just use a fixed 3 decimal precision for safety or let binance handle it if we round correctly.
-    # Binance requires specific step sizes. For a generic implementation, we use round(val, 3) 
-    # to avoid floating point errors like 0.003000000000000001
     slice_qty = round(total_quantity / slices, 3)
     
-    # Adjust last slice to account for rounding differences
     total_executed = 0.0
     
     for i in range(1, slices + 1):
-        # Calculate quantity for this slice
         if i == slices:
             current_qty = round(total_quantity - total_executed, 3)
         else:
@@ -47,8 +41,6 @@ def execute_twap_order(client: BinanceFuturesClient, symbol: str, side: str, tot
             logger.info(f"[{i}/{slices}] Executed {current_qty} {symbol.replace('USDT', '')}")
         except Exception as e:
             logger.error(f"TWAP Step Failed | step={i}/{slices} reason={str(e)}")
-            # For this simple implementation, we'll continue the TWAP even if one slice fails,
-            # or you could choose to break. Let's continue and log it.
         
         if i < slices:
             logger.info(f"TWAP Waiting | seconds={interval_seconds}")

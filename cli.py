@@ -17,9 +17,6 @@ def place_order(
     quantity: float = typer.Argument(..., help="Order quantity (e.g., 0.001)"),
     price: float = typer.Option(None, help="Price (required if LIMIT)")
 ):
-    """
-    Place a single order on Binance Futures Testnet.
-    """
     try:
         symbol = validate_symbol(symbol)
         side = validate_side(side)
@@ -51,9 +48,6 @@ def twap_order(
     slices: int = typer.Argument(..., help="Number of slices to split the order into"),
     interval_seconds: int = typer.Argument(..., help="Time interval between orders in seconds")
 ):
-    """
-    Execute a TWAP (Time Weighted Average Price) order by splitting a large order into smaller market orders.
-    """
     try:
         symbol = validate_symbol(symbol)
         side = validate_side(side)
