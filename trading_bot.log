@@ -1,0 +1,43 @@
+[2026-05-01 23:08:46] INFO: Initialized Client | target=Binance_Futures_Testnet url=https://testnet.binancefuture.com
+[2026-05-01 23:08:46] INFO: Placing MARKET order | symbol=BTCUSDT side=BUY quantity=0.001 price=None
+[2026-05-01 23:08:46] INFO: API Request: Placing order | symbol=BTCUSDT side=BUY type=MARKET quantity=0.001 price=None
+[2026-05-01 23:08:47] INFO: Response | orderId=13097181879 status=NEW executedQty=0.0000 avgPrice=0.00
+
+[2026-05-01 23:29:06] INFO: Initialized Client | target=Binance_Futures_Testnet url=https://testnet.binancefuture.com
+[2026-05-01 23:29:06] INFO: Placing LIMIT order | symbol=BTCUSDT side=SELL quantity=0.001 price=80000.0
+[2026-05-01 23:29:06] INFO: API Request: Placing order | symbol=BTCUSDT side=SELL type=LIMIT quantity=0.001 price=80000.0
+[2026-05-01 23:29:07] INFO: Response | orderId=13097228037 status=NEW executedQty=0.0000 avgPrice=0.00
+
+[2026-05-01 23:29:59] INFO: Initialized Client | target=Binance_Futures_Testnet url=https://testnet.binancefuture.com
+[2026-05-01 23:29:59] INFO: Starting TWAP | symbol=BTCUSDT side=BUY total_quantity=0.005 slices=5 interval=5s
+[2026-05-01 23:29:59] INFO: TWAP Step | step=1/5 quantity=0.001
+[2026-05-01 23:29:59] INFO: Placing MARKET order | symbol=BTCUSDT side=BUY quantity=0.001 price=None
+[2026-05-01 23:29:59] INFO: API Request: Placing order | symbol=BTCUSDT side=BUY type=MARKET quantity=0.001 price=None
+[2026-05-01 23:30:00] INFO: Response | orderId=13097230082 status=NEW executedQty=0.0000 avgPrice=0.00
+[2026-05-01 23:30:00] INFO: [1/5] Executed 0.001 BTC
+[2026-05-01 23:30:00] INFO: TWAP Waiting | seconds=5
+[2026-05-01 23:30:05] INFO: TWAP Step | step=2/5 quantity=0.001
+[2026-05-01 23:30:05] INFO: Placing MARKET order | symbol=BTCUSDT side=BUY quantity=0.001 price=None
+[2026-05-01 23:30:05] INFO: API Request: Placing order | symbol=BTCUSDT side=BUY type=MARKET quantity=0.001 price=None
+[2026-05-01 23:30:06] INFO: Response | orderId=13097230363 status=NEW executedQty=0.0000 avgPrice=0.00
+[2026-05-01 23:30:06] INFO: [2/5] Executed 0.001 BTC
+[2026-05-01 23:30:06] INFO: TWAP Waiting | seconds=5
+[2026-05-01 23:30:11] INFO: TWAP Step | step=3/5 quantity=0.001
+[2026-05-01 23:30:11] INFO: Placing MARKET order | symbol=BTCUSDT side=BUY quantity=0.001 price=None
+[2026-05-01 23:30:11] INFO: API Request: Placing order | symbol=BTCUSDT side=BUY type=MARKET quantity=0.001 price=None
+[2026-05-01 23:30:11] INFO: Response | orderId=13097230559 status=NEW executedQty=0.0000 avgPrice=0.00
+[2026-05-01 23:30:11] INFO: [3/5] Executed 0.001 BTC
+[2026-05-01 23:30:11] INFO: TWAP Waiting | seconds=5
+[2026-05-01 23:30:16] INFO: TWAP Step | step=4/5 quantity=0.001
+[2026-05-01 23:30:16] INFO: Placing MARKET order | symbol=BTCUSDT side=BUY quantity=0.001 price=None
+[2026-05-01 23:30:16] INFO: API Request: Placing order | symbol=BTCUSDT side=BUY type=MARKET quantity=0.001 price=None
+[2026-05-01 23:30:16] INFO: Response | orderId=13097230895 status=NEW executedQty=0.0000 avgPrice=0.00
+[2026-05-01 23:30:16] INFO: [4/5] Executed 0.001 BTC
+[2026-05-01 23:30:16] INFO: TWAP Waiting | seconds=5
+[2026-05-01 23:30:21] INFO: TWAP Step | step=5/5 quantity=0.001
+[2026-05-01 23:30:21] INFO: Placing MARKET order | symbol=BTCUSDT side=BUY quantity=0.001 price=None
+[2026-05-01 23:30:21] INFO: API Request: Placing order | symbol=BTCUSDT side=BUY type=MARKET quantity=0.001 price=None
+[2026-05-01 23:30:21] INFO: Response | orderId=13097231082 status=NEW executedQty=0.0000 avgPrice=0.00
+[2026-05-01 23:30:21] INFO: [5/5] Executed 0.001 BTC
+[2026-05-01 23:30:21] INFO: TWAP Completed | total_executed=0.005/0.005
+
