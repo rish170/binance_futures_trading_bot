@@ -25,6 +25,34 @@ This project provides a simple, robust command-line interface to interact with t
 - **Error Handling**: Graceful handling of Binance API exceptions and network errors.
 - **Structured Logging**: Consistent, informative file-based logging.
 
+## Project Structure
+
+```text
+binance_futures_trading_bot/
+│
+├── trading_bot/
+│   ├── __init__.py
+│   ├── bot/
+│   │   ├── __init__.py
+│   │   ├── client.py         # Binance API wrapper
+│   │   ├── config.py         # Environment configuration
+│   │   ├── logger.py         # Structured logging setup
+│   │   ├── orders.py         # Market, Limit, and TWAP execution logic
+│   │   └── validators.py     # Input validation rules
+│   └── tests/
+│       ├── __init__.py
+│       └── test_validators.py # Unit tests for input validation
+│
+├── images/                   # Screenshots for documentation
+├── .env                      # Local environment variables (ignored in git)
+├── .env.example              # Template for environment variables
+├── .gitignore                # Git ignored files
+├── cli.py                    # Typer CLI entry point
+├── README.md                 # Project documentation
+├── requirements.txt          # Python dependencies
+└── trading_bot.log           # Application logs (generated during execution)
+```
+
 ## Setup Instructions
 
 1. Clone or download the repository.
